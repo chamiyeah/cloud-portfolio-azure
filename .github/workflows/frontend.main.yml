@@ -20,13 +20,13 @@ jobs:
     - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
-        azcliversion: 2.0.72
+        azcliversion: 2.30.00
         inlineScript: |
             az storage blob upload-batch --resource-group "cloud-portfolio" --account-name cloudportfolio --auth-mode key -d '$web' -s frontend/
     - name: Purge CDN endpoint
       uses: azure/CLI@v1
       with:
-        azcliversion: 2.0.72
+        azcliversion: 2.30.00
         inlineScript: |
            az cdn endpoint purge --content-paths  "/*" --profile-name "cloud-portfolio" --name "cloud-portfolio" --resource-group "cloud-portfolio"
 
