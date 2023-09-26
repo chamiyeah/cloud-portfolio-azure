@@ -22,13 +22,13 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-            az storage blob upload-batch az account set --subscription d83dcf9-9266-4b8f-b2d7-7cfc71e136e3 --account-name cloudportfolio --auth-mode key -d '$web' -s frontend/
+            az storage blob upload-batch --resource-group "cloud-portfolio" --account-name cloudportfolio --auth-mode key -d '$web' -s frontend/
     - name: Purge CDN endpoint
       uses: azure/CLI@v1
       with:
         azcliversion: 2.0.72
         inlineScript: |
-           az cdn endpoint purge --content-paths  "/*" --profile-name "cloud-portfolio" --name "cloud-portfolio" --resource-group "cloud-portfolio"/
+           az cdn endpoint purge --content-paths  "/*" --profile-name "cloud-portfolio" --name "cloud-portfolio" --resource-group "cloud-portfolio"
 
   # Azure logout
     - name: logout
