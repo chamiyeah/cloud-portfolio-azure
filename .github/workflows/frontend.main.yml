@@ -22,7 +22,7 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-            az storage blob upload-batch --account-name "cloudportfolio" --auth-mode key -d '$web' -s frontend/
+            az storage blob upload-batch --auth-mode key -d '$web' -s frontend/ --account-name "cloudportfolio" --resource-group "cloud-portfolio"
     - name: Purge CDN endpoint
       uses: azure/CLI@v1
       with:
