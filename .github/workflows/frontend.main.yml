@@ -15,14 +15,20 @@ jobs:
     - uses: azure/login@v1
       with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-
+          
+    - name: set account
+      uses: azure/CLI@v1
+      with:
+        azcliversion: 2.0.72
+        inlineScript: |
+            az account set --subscription "2d83dcf9-9266-4b8f-b2d7-7cfc71e136e3"
 
     - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
         azcliversion: 2.0.72
         inlineScript: |
-            az account set --subscription "2d83dcf9-9266-4b8f-b2d7-7cfc71e136e3" storage blob upload-batch --auth-mode key -d '$web' -s frontend/ --account-name cloudportfolio
+            az storage blob upload-batch --auth-mode key -d '$web' -s frontend/ --account-name cloudportfolio
     - name: Purge CDN endpoint
       uses: azure/CLI@v1
       with:
