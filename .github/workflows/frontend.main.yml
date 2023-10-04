@@ -16,10 +16,13 @@ jobs:
       with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-    - name: Login via Azure CLI
-      uses: azure/login@v1
+    - name: Set active account
+      uses: azure/CLI@v1
       with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}    
+          azcliversion: 2.0.72
+          inlineScript: |
+            az account set --subscription 2d83dcf9-9266-4b8f-b2d7-7cfc71e136e3
+
     - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
