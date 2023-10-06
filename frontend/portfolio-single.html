@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Champaka Wijerathne</title>
+  <meta name="description" content="Cloud Solutions Architect">
+  <meta name="author" content="Champaka Wijerathne">
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <script src="main.js"></script>
+  <script src="js/modernizr.js"></script>
+
+
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/themify/css/themify-icons.css">
+  <link rel="stylesheet" href="plugins/counto/animate.css">
+  <link rel="stylesheet" href="plugins/aos/aos.css">
+  <link rel="stylesheet" href="plugins/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="plugins/owl-carousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
+  <link rel="stylesheet" href="plugins/animated-text/animated-text.css">
+
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+     <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.png" >
+
+
+</head>
+
+<body>
+  
+<!-- Navigation Start -->
+<!-- Header Start --> 
+
+<nav class="navbar navbar-expand-lg  main-nav " id="navbar">
+	<div class="container">
+	  <a class="navbar-brand" href="index.html">
+	  	<img src="images/logo.png" alt="" class="img-fluid">
+	  </a>
+
+	  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="ti-align-justify"></span>
+	  </button>
+  
+		  <div class="collapse navbar-collapse" id="navbarsExample09">
+			<ul class="navbar-nav ml-auto">
+			  <li class="nav-item  active"><a class="nav-link" href="index.html">Home</a></li>
+			  <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+			  <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+			   <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!-- Header Close --> 
+
+
+<section class="page-title section pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="text-center">
+          <h1 class="text-capitalize mb-0 text-lg">Automated Adobe Media Encorder Cloud Render Farm on Azure</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section portfolio-single">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-8">
+				<div class="project-info">
+					<p>Graphic intensive editing and rendering workloads getting heavier and heavier following the rapid development in large resolution video formats. Professional raw and pro-res type video formats are now common across the field and the current vertically scaling on-prem render nodes are becoming economically unviable for this massive render jobs. With the economy of scale and the availability in the cloud, it makes more sense to move the intensive render jobs to the public cloud. This is a brief walkthrough of a project I designed and Imprinted for commercial production house to streamline their render process.</p>
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+				<div class="info">
+					<h5 class="mb-0">Client</h5>
+					<p>Kandy Films Pvt Ltd. </p>
+				</div>
+				<div class="info">
+						<h5 class="mb-0">Platform</h5>
+						<p>Microsoft Azure</p>
+					</div>
+					<div class="info">
+						<h5 class="mb-0">Type</h5>
+						<p>Commericial</p>
+					</div>
+				
+			</div>
+		</div>
+
+		<div class="row mt-5">
+			<div class="col-lg-12">
+
+				<p>&nbsp;</p>
+
+				<h3>Previous Infarstructure.</h3>
+				
+				<p><span style="font-size:11pt">The client was using a basic on-prem infrastructure, Consist of a private network, NAS file storage, subnet consist of a editing machines and another with the render engine machine.</span></span></p>
+				
+				<p><img alt="" src="https://ckeditor.com/apps/ckfinder/userfiles/files/Render%20Farm(1)(1).png" style="height:485px; width:800px" /></p>
+				
+				<h3>Pitfalls and Procepects.</h3>
+				
+				<p><span style="font-size:11pt">As you can see on the diagram, this infrastructure is vertically scaling. And since the render engine and the NAS server is disconnected from the internet, render jobs only can be executed within the network. Client`s future roadmap includes more edit labs in multiple locations and this make this infrastructure resource intensive and non compliance. While keeping the current edit nodes as it is, client`s requirement was to de-commissioning the on-prem render lab and move the entire render lab to cloud, so a render job can be pulled from anywhere at any time with the benefits of public cloud.</span></span></p>
+				
+				<p>&nbsp;</p>
+				
+				<h3>New Cloud Infarstructure</h3>
+				
+				<p><span style="font-size:11pt">Simplified Architecture Diagram.</span></span></p>
+				
+				<h3><img alt="" src="https://ckeditor.com/apps/ckfinder/userfiles/files/Render%20Farm%20Azure.png" style="height:445px; width:800px" /><br />
+				<br />
+				&nbsp;</h3>
+				
+				<h3>New cloud infrastructure consist of following components.</h3>
+				
+				<p><span style="font-size:12pt">Within Azure VNet,</span></p>
+				
+				<p><span style="font-size:12pt">N Series VMs for render engine.<br />
+				A bastion server in a different subnet for secure connection to the VM using RDP / SSH.</span></p>
+				
+				<p><span style="font-size:12pt">SMB file sharing using SMB 3.0 protocol. This can be also set up without a Virtual Network Gateway and a VPN.</span></p>
+				
+				<p><span style="font-size:12pt">Necessary networking components as shown in the diagram.</span></p>
+				
+				<p>&nbsp;</p>
+				
+				<h3>How it works</h3>
+				
+				<p><span style="font-size:12pt">Initial Setup - Single Render Node</span></p>
+				
+				<p><span style="font-size:12pt">Deploy a N series or similar performance (Matching to your requirements) VM in a new private subnet within a new security group. This will be called Render VM hereafter.</span></p>
+				
+				<p><span style="font-size:12pt">Deploy a bastion server in another subnet and connect the Render VM through a RDP/SSH connection at port 3389.</span></p>
+				
+				<p><span style="font-size:12pt">Deploy a SMB file share within the azure to sync render ready project files between the on-prem &amp; Cloud network. This can be set up with or without a Virtual Network gateway. But I strongly suggest using one.</span></p>
+				
+				<p><span style="font-size:12pt">Once the architecture is deployed and everything is connected, client or the sys admin can log in to the Render Engine through the bastion server from the Azure Portal. Once logged in, they can set up the &quot;Adobe Media Encoder&quot; within the VM.</span></p>
+				
+				<p><span style="font-size:12pt">Connect the SMB file share between the Render VM and the Client&#39;s local machine.</span></p>
+				
+				<p>&nbsp;</p>
+
+<p><span style="font-size:12pt"><img alt="" src="https://ckeditor.com/apps/ckfinder/userfiles/files/watch%20folders.JPG" style="height:198px; width:800px" /></span></p>
+
+<p>Watch folders set up in Azure SMB File Shares</p>
+
+<p>&nbsp;</p>
+				
+				<p><span style="font-size:11pt">Instead of running the render engine locally, we can use the power and freedom of the public cloud to run the render engine in cloud for a fraction of the price. We will be using adobe media encoder as the render engine and it will be installed to a N series or similar range Virtual Machine. And we will be also using a SMB file share to sync the render files between the cloud and on prem computers. Once a project is ready to render, the client can save the final project files with the media files in to a pre defined folder (called watch folders) in the SMB disk. As soon as the project files are successfully saved in the shared disk, Adobe media encoder in the azure VM will automatically pickup the render job and will run it. Upon finishing the render, the output file will be saved in the same SMB disk for easy access and the VM will automatically shutdown, minimizing the operational costs. Virtual machine can be turn on manually through the azure portal. But much better option would be running the whole Infrastructure as code. Thus, saving more time on setting up. This method is more suited when you are on production environment.</span></span></p>
+				
+				<p>&nbsp;</p>
+				
+				<p><span style="color:#e74c3c">*This is a breif overview about the project. This is not the documentaion nor the white paper.</span><br type="_moz" />
+				&nbsp;</p>
+				
+				<p>&nbsp;</p>
+				
+				<p>&nbsp;</p>
+				
+				<p>&nbsp;</p>
+				
+				<p><br />
+				&nbsp;</p>
+				
+			</div>
+		</div>
+
+
+		<div class="row mt-5 justify-content-center">
+			<div class="col-lg-6 text-center">
+				<a href="portfolio-single3.html" class="btn btn-dark">Previous Work</a>
+				<a href="portfolio-single.html" class="btn btn-dark">Next Work</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- Footer start -->
+<section class="footer">
+	<div class="container">
+		<div class="row ">
+			<div class="col-lg-6">
+				<p class="mb-0">Powerd by Azure </a></p>
+			</div>
+			<div class="col-lg-6">
+				<div class="widget footer-widget text-lg-right mt-5 mt-lg-0">
+					<ul class="list-inline mb-0">
+						<li class="list-inline-item"><a href="https://www.linkedin.com/in/champikawijerathne/" target="_blank"><i class="ti-linkedin mr-3"></i></a>
+						</li>
+						<li class="list-inline-item"><a href="https://cloud.wijerathne.com" target="_blank"><i class="ti-window mr-3"></i></a>
+						</li>
+						<li class="list-inline-item"><a href="https://github.com/" target="_blank"><i class="ti-github mr-3"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Footer End -->
+
+<!-- jQuery -->
+<script src="plugins/jQuery/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="plugins/aos/aos.js"></script>
+<script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+<script src="plugins/shuffle/shuffle.min.js"></script>
+<script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="plugins/animated-text/animated-text.js"></script>
+<script src="plugins/counto/apear.js"></script>
+<script src="plugins/counto/counTo.js"></script>
+
+ <!-- Google Map -->
+<script src="plugins/google-map/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script> 
+<!-- Main Script -->
+<script src="js/script.js"></script>
+
+</html>
